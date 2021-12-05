@@ -8,9 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selection = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView(selection: $selection) {
+            DashboardScreen()
+                .tabItem {
+                    VStack {
+                        Text("Dashboard")
+                        Image(systemName: "paperplane")
+                        Text("Dashboard")
+                    }
+                }
+                .tag(0)
+            
+            CatalogScreen()
+                .tabItem {
+                    Label("Catalog", systemImage: "folder")
+                }
+                .tag(1)
+            
+            ProfileScreen()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+                .tag(2)
+        }
+        
     }
 }
 

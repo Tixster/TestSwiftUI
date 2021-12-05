@@ -11,6 +11,12 @@
 		3E04A6DE2755454600E6C9B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6DD2755454600E6C9B2 /* ContentView.swift */; };
 		3E04A6E02755454900E6C9B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E04A6DF2755454900E6C9B2 /* Assets.xcassets */; };
 		3E04A6E32755454900E6C9B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E04A6E22755454900E6C9B2 /* Preview Assets.xcassets */; };
+		3E04A6EA2755456A00E6C9B2 /* DashboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6E92755456A00E6C9B2 /* DashboardScreen.swift */; };
+		3E04A6EC2755464E00E6C9B2 /* CatalogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6EB2755464E00E6C9B2 /* CatalogScreen.swift */; };
+		3E04A6EE2755468700E6C9B2 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6ED2755468700E6C9B2 /* ProfileScreen.swift */; };
+		3E04A6F027554BDF00E6C9B2 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6EF27554BDF00E6C9B2 /* DashboardViewModel.swift */; };
+		3E04A6F427554DCA00E6C9B2 /* AboutAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6F327554DCA00E6C9B2 /* AboutAppScreen.swift */; };
+		3E04A6F627554FCB00E6C9B2 /* ContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E04A6F527554FCB00E6C9B2 /* ContactScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		3E04A6DD2755454600E6C9B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E04A6DF2755454900E6C9B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E04A6E22755454900E6C9B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E04A6E92755456A00E6C9B2 /* DashboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreen.swift; sourceTree = "<group>"; };
+		3E04A6EB2755464E00E6C9B2 /* CatalogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreen.swift; sourceTree = "<group>"; };
+		3E04A6ED2755468700E6C9B2 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		3E04A6EF27554BDF00E6C9B2 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		3E04A6F327554DCA00E6C9B2 /* AboutAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppScreen.swift; sourceTree = "<group>"; };
+		3E04A6F527554FCB00E6C9B2 /* ContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				3E04A6DB2755454600E6C9B2 /* TestUIApp.swift */,
+				3E04A6E92755456A00E6C9B2 /* DashboardScreen.swift */,
+				3E04A6EF27554BDF00E6C9B2 /* DashboardViewModel.swift */,
+				3E04A6F527554FCB00E6C9B2 /* ContactScreen.swift */,
+				3E04A6F327554DCA00E6C9B2 /* AboutAppScreen.swift */,
 				3E04A6DD2755454600E6C9B2 /* ContentView.swift */,
+				3E04A6EB2755464E00E6C9B2 /* CatalogScreen.swift */,
+				3E04A6ED2755468700E6C9B2 /* ProfileScreen.swift */,
 				3E04A6DF2755454900E6C9B2 /* Assets.xcassets */,
 				3E04A6E12755454900E6C9B2 /* Preview Content */,
 			);
@@ -138,7 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E04A6DE2755454600E6C9B2 /* ContentView.swift in Sources */,
+				3E04A6F427554DCA00E6C9B2 /* AboutAppScreen.swift in Sources */,
+				3E04A6EC2755464E00E6C9B2 /* CatalogScreen.swift in Sources */,
 				3E04A6DC2755454600E6C9B2 /* TestUIApp.swift in Sources */,
+				3E04A6EA2755456A00E6C9B2 /* DashboardScreen.swift in Sources */,
+				3E04A6F627554FCB00E6C9B2 /* ContactScreen.swift in Sources */,
+				3E04A6F027554BDF00E6C9B2 /* DashboardViewModel.swift in Sources */,
+				3E04A6EE2755468700E6C9B2 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
