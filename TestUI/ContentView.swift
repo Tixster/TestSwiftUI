@@ -14,12 +14,11 @@ struct ContentView: View {
     var body: some View {
         
         TabView(selection: $selection) {
-            DashboardScreen()
+            DashboardScreen(selected: $selection)
                 .tabItem {
                     VStack {
                         Text("Dashboard")
                         Image(systemName: "paperplane")
-                        Text("Dashboard")
                     }
                 }
                 .tag(0)

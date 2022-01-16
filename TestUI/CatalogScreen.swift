@@ -30,36 +30,40 @@ struct Food: Identifiable {
 
 struct CatalogScreen: View {
     
-    @ObservedObject var foodListViewModel: FoodListViewModel = .init()
+    @ObservedObject var foodListViewModel = FoodListViewModel()
+    @EnvironmentObject var dashboardViewModel: DashboardViewModel
     
     var body: some View {
         NavigationView {
-            FoodList()
-                .environmentObject(foodListViewModel)
-                .navigationTitle("Food")
-                .navigationBarHidden(true)
+            VStack {
+                FoodList()
+                    .environmentObject(foodListViewModel)
+                    .navigationTitle("Food")
+                    .navigationBarHidden(true)
+                NavigationLink(tag: dashboardViewModel.selectionIndex ?? 0, selection: $dashboardViewModel.selectionIndex) {
+                    DetailFood(name: foodListViewModel.foods[dashboardViewModel.selectionIndex ?? 0].name)
+                } label: {}
+            }
         }
-}
+    }
+    
+    struct FoodList: View {
+        
+        @EnvironmentObject var foodListViewModel: FoodListViewModel
+        @EnvironmentObject var dashboardViewModel: DashboardViewModel
 
-struct FoodList: View {
-    
-    @EnvironmentObject var foodListViewModel: FoodListViewModel
-    
-    var body: some View {
-        List {
-            CatalogFilterCell()
-                .environmentObject(foodListViewModel)
-            ForEach(foodListViewModel.foods) { food in
-                if !foodListViewModel.isFavEnabled || food.isFav {
-                    NavigationLink(destination: DetailFood(name: food.name)) {
-                        Label(food.name, systemImage: "leaf")
+        var body: some View {
+            List {
+                CatalogFilterCell()
+                ForEach(foodListViewModel.foods) { food in
+                    if !foodListViewModel.isFavEnabled || food.isFav {
+                        NavigationLink(destination: DetailFood(name: food.name)) {
+                            Label(food.name, systemImage: "leaf")
+                        }
                     }
                 }
             }
-        }
-        .listStyle(.plain)
-        .edgesIgnoringSafeArea(.all)
-        
+            .listStyle(.plain)
         }
     }
 }
@@ -84,6 +88,7 @@ struct CatalogFilterCell: View {
             Text("Show Favorites")
         }
     }
+
 }
 
 struct CatalogScreen_Previews: PreviewProvider {

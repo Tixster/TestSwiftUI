@@ -11,5 +11,6 @@ final class DashboardViewModel: ObservableObject {
     
     @Published var title: String = "Dashboard"
     @Published var isContactShowed = false
+    @Published var selectionIndex: Int?
     
 }
